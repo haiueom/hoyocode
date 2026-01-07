@@ -2,11 +2,12 @@
 	"name": "hoyocode",
 	"type": "module",
 	"scripts": {
-		"dev": "wrangler dev",
+		"dev": "wrangler d1 execute hoyocode --local --file=./schema.sql && wrangler dev --test-scheduled",
 		"deploy": "wrangler deploy --minify",
 		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
 	},
 	"dependencies": {
+		"cheerio": "^1.1.2",
 		"hono": "^4.11.3"
 	},
 	"devDependencies": {

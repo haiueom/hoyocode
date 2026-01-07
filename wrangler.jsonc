@@ -13,7 +13,16 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "hoyocode",
+			"database_id": "812e4870-44a7-4996-8774-309091860f86"
+		}
+	],
+	"triggers": { "crons": ["0 * * * *"] },
+	// "triggers": { "crons": ["* * * * *"] }, // test every minute
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
